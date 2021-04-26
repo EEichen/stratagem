@@ -1,12 +1,15 @@
 const router = require('express').Router();
+
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 const manualsRouter = require('./manuals.js')
+const stratagemsRouter = require('./stratagems')
 
 router.use('/session', sessionRouter);
 
 router.use('/users', usersRouter);
 router.use('/manuals', manualsRouter)
+router.use('/stratagems', stratagemsRouter)
 
 
 

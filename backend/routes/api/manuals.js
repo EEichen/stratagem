@@ -16,7 +16,7 @@ const validateManual = [
         handleValidationErrors,
 ]
 
-router.post('/', requireAuth, validateManual, asyncHandler(async (req, res) => {
+router.post('/', validateManual, requireAuth, asyncHandler(async (req, res) => {
     const {title} = req.body;
     // console.log(req.user)
     const userId = req.user.id 
