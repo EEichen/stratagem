@@ -1,8 +1,5 @@
 'use strict';
 
-const faker = require('faker');
-const bcrypt = require('bcryptjs');
-
 module.exports = {
   up: (queryInterface, Sequelize) => {
     /*
@@ -15,15 +12,12 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    return queryInterface.bulkInsert('Users', [
-      {
-        email: 'demo@demo.com',
-        username: 'DemoUser',
-        hashedPassword: bcrypt.hashSync('password'),
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      },
-    ], {});
+    return queryInterface.bulkInsert('Stratagems', [{
+      title: 'test',
+      text: 'this is a test stratagem',
+      imageUrl: '',
+      manualId: 1
+    }], {});
   },
 
   down: (queryInterface, Sequelize) => {
@@ -34,9 +28,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('People', null, {});
     */
-    const Op = Sequelize.Op;
-    return queryInterface.bulkDelete('Users', {
-      username: { [Op.in]: ['Demo-lition', 'FakeUser1', 'FakeUser2'] }
-    }, {});
+    return queryInterface.bulkDelete('Stratagems', null, {});
   }
 };
