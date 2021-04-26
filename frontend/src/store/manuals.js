@@ -60,6 +60,7 @@ export const deleteManual = (id) => async (dispatch) => {
     })
 
     dispatch(removeManual(id))
+    return res;
 }
 
 
@@ -74,10 +75,11 @@ export default function manualsReducer(state = initialState, action){
             return newState;
         case ADD_MANUAL:
             newState = {...state, [action.manual.id]: action.manual }
-            return newState
+            return newState;
         case REMOVE_MANUAL:
             newState = {...state}
             delete newState[action.id]
+            return newState;
         default:
             return state;
     }
