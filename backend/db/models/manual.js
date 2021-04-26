@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     userId: {
-      tpye: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {model: 'Users'}
     }
