@@ -49,6 +49,14 @@ router.get('/', requireAuth, asyncHandler(async (req, res) => {
 
 }))
 
+router.get('/:id', asyncHandler(async (req, res) => {
+    const manualId = parseInt(req.params.id)
+
+    const stratagems = await Stratagem.findAll({where: {manualId}})
+
+    res.json({stratagems})
+}))
+
 router.put('/:id', validateStratagem, asyncHandler(async (req, res) => {
     const id = parseInt(req.params.id)
     const stratagem = await Stratagem.findByPk(id)
@@ -67,5 +75,6 @@ router.delete('/:id', asyncHandler(async (req, res) => {
 
     res.status(204).end();
 }))
+
 
 module.exports = router;

@@ -33,7 +33,12 @@ router.post('/', validateManual, requireAuth, asyncHandler(async (req, res) => {
 router.get('/', requireAuth, asyncHandler(async (req, res) => {
     const userId = req.user.id
 
-    const manuals = await Manual.findAll({where: {userId}})
+    const userManuals = await Manual.findAll({where: {userId}})
+    const manuals = {}
+
+    userManuals.forEach(manual => {
+        manuals[manual.id] = manual;
+    });
 
     res.json({manuals})
 }))
@@ -63,5 +68,6 @@ router.delete('/:id', asyncHandler(async (req, res) => {
     
     res.status(204).end();
 }))
+
 
 module.exports = router

@@ -4,12 +4,14 @@ const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 const manualsRouter = require('./manuals.js')
 const stratagemsRouter = require('./stratagems')
+const searchRouter = require('./search')
 
 router.use('/session', sessionRouter);
 
 router.use('/users', usersRouter);
 router.use('/manuals', manualsRouter)
 router.use('/stratagems', stratagemsRouter)
+router.use('/search', searchRouter)
 
 
 
