@@ -15,7 +15,7 @@ const addManual = (manual) => ({
     manual
 })
 
-const removeManual = (id) ({
+const removeManual = (id) => ({
     type: REMOVE_MANUAL,
     id
 })
@@ -66,7 +66,7 @@ export const deleteManual = (id) => async (dispatch) => {
 //reducer-----------------------------------------------------------------------
 const initialState = {}
 
-export default function manualReducer(state = initialState, action){
+export default function manualsReducer(state = initialState, action){
     let newState;
     switch(action.type){
         case POPULATE_MANUALS:
