@@ -17,7 +17,7 @@ const validateStratagem = [
 ]
 
 router.post('/', validateStratagem, asyncHandler(async (req, res) => {
-    const {title, text, imageUrl, manualId} = req.body;
+    let {title, text, imageUrl, manualId} = req.body;
     if(!text) text = '';
     if (!imageUrl) imageUrl = '';
 

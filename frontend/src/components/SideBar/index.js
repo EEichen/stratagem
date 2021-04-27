@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { getManuals } from "../../store/manuals";
-import { getStratagems, getStratagemsWithId } from "../../store/stratagems";
+import { createStratagem, getStratagems, getStratagemsWithId } from "../../store/stratagems";
 import ManualForm from "./ManualForm";
 import ManualLink from "./ManualLink";
 
@@ -32,10 +32,16 @@ const SideBar = () => {
         }
     }
 
+
     return(
         <div>
             Side Bar (placeholder)
-            <div><button disabled={!isSelected}>➕ Add a Stratagem</button></div>
+            <div>
+                <button disabled={!isSelected} onClick={e => dispatch(createStratagem(selectedManual))}>
+                ➕ Add a Stratagem
+                </button>
+            </div>
+            
             <div>
                 <div onClick={() => dispatch(getStratagems())}>Stratagems</div>
             </div>

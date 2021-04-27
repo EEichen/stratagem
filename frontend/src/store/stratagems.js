@@ -38,13 +38,14 @@ export const getStratagemsWithId = (id) => async (dispatch) => {
 }
 
 
-export const createStratagem = (stratagem) => async (dispatch) => {
+export const createStratagem = (manualId) => async (dispatch) => {
+    const stratagem = { title: 'untitled', text: '', imageUrl: '', manualId}
     const res = await csrfFetch('/api/stratagems', {
         method: 'POST',
         body: JSON.stringify(stratagem)
     })
 
-    const newStratagem = await res.json();
+    const {newStratagem} = await res.json();
 
     dispatch(addStratagem(newStratagem))
 }
