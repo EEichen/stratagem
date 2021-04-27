@@ -1,13 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
-import {NavLink} from 'react-router-dom'
 import { getManuals } from "../../store/manuals";
-import { getStratagemsWithId } from "../../store/stratagems";
+import { getStratagems, getStratagemsWithId } from "../../store/stratagems";
 import ManualLink from "./ManualLink";
 
 const SideBar = () => {
     const dispatch = useDispatch();
     const manuals = useSelector(state => state.manuals);
+
+    const [isSelected, setIsSelected] = useState(false);
+    const [selectedManual, setSelectedManual] = useState(0);
     // console.log(manuals)
     
     useEffect(() => {
@@ -20,6 +22,10 @@ const SideBar = () => {
             const id = e.target.id.split('-')[1]
             console.log(id);
 
+            setIsSelected(true)
+            setSelectedManual(id)
+
+
             dispatch(getStratagemsWithId(id))
         }
     }
@@ -28,7 +34,7 @@ const SideBar = () => {
         <div>
             Side Bar (placeholder)
             <div>
-                <NavLink to='/allStratagems'>Stratagems</NavLink>
+                <div onClick={() => dispatch(getStratagems())}>Stratagems</div>
             </div>
             <div>Manuals</div>
             <div className='manuals-list' onClick={selectManual}>

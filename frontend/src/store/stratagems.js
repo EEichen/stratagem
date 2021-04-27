@@ -32,7 +32,7 @@ export const getStratagems = () => async (dispatch) => {
 
 export const getStratagemsWithId = (id) => async (dispatch) => {
     const res = await csrfFetch(`/api/stratagems/${id}`)
-    const stratagems = await res.json()
+    const {stratagems} = await res.json()
 
     dispatch(populateStratagems(stratagems))
 }
