@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { getManuals } from "../../store/manuals";
 import { createStratagem, getStratagems, getStratagemsWithId } from "../../store/stratagems";
+import Search from "../Search";
 import ManualForm from "./ManualForm";
 import ManualLink from "./ManualLink";
 
@@ -36,12 +37,14 @@ const SideBar = () => {
     return(
         <div>
             Side Bar (placeholder)
+
+            <Search />
             <div>
                 <button disabled={!isSelected} onClick={e => dispatch(createStratagem(selectedManual))}>
                 ➕ Add a Stratagem
                 </button>
             </div>
-            
+
             <div>
                 <div onClick={() => dispatch(getStratagems())}>Stratagems</div>
             </div>

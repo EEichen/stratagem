@@ -1,6 +1,7 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import manualsReducer from "./manuals";
+import searchReducer from "./search";
 import sessionReducer from './session'
 import stratagemsReducer from "./stratagems";
 
@@ -9,6 +10,7 @@ const rootReducer = combineReducers({
   session: sessionReducer,
   manuals: manualsReducer,
   stratagems: stratagemsReducer,
+  searchResults: searchReducer
 });
 
 let enhancer;
