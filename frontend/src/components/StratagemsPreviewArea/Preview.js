@@ -1,4 +1,4 @@
-import { NavLink, useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 const Preview = ({stratagem}) => {
     let history  = useHistory();
