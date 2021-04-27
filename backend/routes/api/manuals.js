@@ -33,12 +33,7 @@ router.post('/', validateManual, requireAuth, asyncHandler(async (req, res) => {
 router.get('/', requireAuth, asyncHandler(async (req, res) => {
     const userId = req.user.id
 
-    const userManuals = await Manual.findAll({where: {userId}})
-    const manuals = {}
-
-    userManuals.forEach(manual => {
-        manuals[manual.id] = manual;
-    });
+    const manuals = await Manual.findAll({where: {userId}})
 
     res.json({manuals})
 }))
