@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
 import { getSearchResults } from "../../store/search";
+import SearchResults from "./SearchResults";
 
 
 const Search = () => {
@@ -26,6 +27,7 @@ const Search = () => {
             value={input}
             onChange={onSearch}
              />
+             <SearchResults />
         </div>
     )
 }
