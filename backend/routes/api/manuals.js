@@ -50,7 +50,7 @@ router.put('/:id', validateManual, asyncHandler(async (req, res) => {
     if(manual){
         manual.title = req.body.title
         await manual.save()
-        res.json({manual})
+        res.json({newManual: manual})
     }
     else{
         const err = new Error(`Manual ${id} not found!`)

@@ -10,7 +10,7 @@ const SideBar = () => {
     const manuals = useSelector(state => state.manuals);
 
     const [isSelected, setIsSelected] = useState(false);
-    const [selectedManual, setSelectedManual] = useState(0);
+    const [selectedManual, setSelectedManual] = useState('');
     const [showManualForm, setShowManualForm] = useState(false);
     // console.log(manuals)
     
@@ -41,11 +41,10 @@ const SideBar = () => {
             </div>
             <div>Manuals <span onClick={() => setShowManualForm(true)}>➕</span></div>
 
-            {showManualForm ? <ManualForm 
-            hidden={showManualForm} 
-            setShowManualForm={setShowManualForm} 
-            isNewManual={true}
-            manual={{}}
+            {showManualForm ? <ManualForm  
+                setShowManualForm={setShowManualForm} 
+                isNewManual={true}
+                manual={{}}
             /> : ''}
 
             <div className='manuals-list' onClick={selectManual}>

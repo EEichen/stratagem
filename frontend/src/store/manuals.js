@@ -37,7 +37,6 @@ export const createManual = (manual) => async (dispatch) => {
     })
 
     const {newManual} = await res.json();
-    console.log(newManual)
     dispatch(addManual(newManual))
 } 
 
