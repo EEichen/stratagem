@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
   Manual.associate = function(models) {
     // associations can be defined here
     Manual.belongsTo(models.User, { foreignKey: "userId"})
-    Manual.hasMany(models.Stratagem, {foreignKey: "manualId"})
+    Manual.hasMany(models.Stratagem, { foreignKey: "manualId", onDelete: 'cascade', hooks: true})
   };
   return Manual;
 };
