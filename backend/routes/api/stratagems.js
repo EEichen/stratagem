@@ -70,6 +70,13 @@ router.put('/:id', validateStratagem, asyncHandler(async (req, res) => {
 
     if(stratagem){
         await stratagem.update({title, text, imageUrl})
+        res.json({newStratagem: stratagem})
+    }
+    else {
+        const err = new Error(`Stratagem ${id} not found!`)
+        err.status = 404
+        err.title = 'Stratagem Not Found'
+        res.json({ err })
     }
 }))
 
