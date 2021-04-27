@@ -1,2 +1,1 @@
-# authenticate-me
 # stratagem
