@@ -1,7 +1,9 @@
 import {useSelector} from 'react-redux'
 
 import SideBar from '../SideBar'
+import StratagemsPreviewArea from '../StratagemsPreviewArea'
 import SplashPage from './SplashPage'
+import './Homepage.css'
 
 
 
@@ -12,9 +14,9 @@ const Homepage = () => {
 
     if(sessionUser){
         return (
-            <div>
-                user Homepage
+            <div className='homepage'>
                 <SideBar />
+                <StratagemsPreviewArea />
             </div>
         )
     }

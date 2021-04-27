@@ -1,12 +1,9 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import ManualOptions from "./ManualOptions";
 
 const ManualLink = ({manual}) => {
     const [showOptions, setShowOptions] = useState(false);
-    
-    useEffect(() => {
-        console.log(showOptions)
-    })
+
     
     return(
         <div>
