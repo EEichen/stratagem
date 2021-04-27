@@ -21,9 +21,17 @@ const removeStratagem = (id) => ({
 })
 
 
+
 //thunks------------------------------------------------------------------------
 export const getStratagems = () => async (dispatch) => {
     const res = await csrfFetch('/api/stratagems')
+    const {stratagems} = await res.json()
+
+    dispatch(populateStratagems(stratagems))
+}
+
+export const getStratagemsWithId = (id) => async (dispatch) => {
+    const res = await csrfFetch(`/api/stratagems/${id}`)
     const stratagems = await res.json()
 
     dispatch(populateStratagems(stratagems))
@@ -71,7 +79,7 @@ export default function stratagemsReducer(state = initialState, action){
     let newState;
     switch(action.type){
         case POPULATE_STRATAGEMS:
-            newState = {...state, ...action.stratagems}
+            newState = {...action.stratagems}
             return newState
         case ADD_STRATAGEM:
             newState = {...state, [action.stratagem.id]: action.stratagem}

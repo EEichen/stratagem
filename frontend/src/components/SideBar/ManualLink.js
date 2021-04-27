@@ -1,9 +1,7 @@
-import { NavLink } from "react-router-dom"
-
 
 const ManualLink = ({manual}) => {
     return(
-        <NavLink to={`stratagems/${manual.id}`}></NavLink>
+        <div id={`manual-${manual.id}`}>{manual.title}</div>
     )
 }
 

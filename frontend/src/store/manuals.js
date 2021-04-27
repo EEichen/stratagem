@@ -24,7 +24,7 @@ const removeManual = (id) => ({
 //thunks------------------------------------------------------------------------
 export const getManuals = () => async (dispatch) => {
     const res = await csrfFetch('/api/manuals')
-    const manuals = await res.json()
+    const {manuals} = await res.json()
 
     dispatch(populateManuals(manuals))
 }

@@ -52,7 +52,13 @@ router.get('/', requireAuth, asyncHandler(async (req, res) => {
 router.get('/:id', asyncHandler(async (req, res) => {
     const manualId = parseInt(req.params.id)
 
-    const stratagems = await Stratagem.findAll({where: {manualId}})
+    const userStratagems = await Stratagem.findAll({where: {manualId}})
+
+    const stratagems = {}
+
+     userStratagems.forEach(stratagem => {
+         stratagems[stratagem.id] = stratagem
+     })
 
     res.json({stratagems})
 }))
