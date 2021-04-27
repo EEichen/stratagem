@@ -36,8 +36,8 @@ export const createManual = (manual) => async (dispatch) => {
         body: JSON.stringify(manual)
     })
 
-    const newManual = await res.json();
-
+    const {newManual} = await res.json();
+    console.log(newManual)
     dispatch(addManual(newManual))
 } 
 
@@ -48,7 +48,7 @@ export const editManual = (manual) => async (dispatch) => {
         body: JSON.stringify(manual)
     })
 
-    const newManual = await res.json();
+    const {newManual} = await res.json();
 
     dispatch(addManual(newManual))
 }

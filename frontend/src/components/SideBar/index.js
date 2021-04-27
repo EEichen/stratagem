@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { getManuals } from "../../store/manuals";
 import { getStratagems, getStratagemsWithId } from "../../store/stratagems";
+import ManualForm from "./ManualForm";
 import ManualLink from "./ManualLink";
 
 const SideBar = () => {
@@ -10,6 +11,7 @@ const SideBar = () => {
 
     const [isSelected, setIsSelected] = useState(false);
     const [selectedManual, setSelectedManual] = useState(0);
+    const [showManualForm, setShowManualForm] = useState(false);
     // console.log(manuals)
     
     useEffect(() => {
@@ -33,10 +35,19 @@ const SideBar = () => {
     return(
         <div>
             Side Bar (placeholder)
+            <div><button disabled={!isSelected}>➕ Add a Stratagem</button></div>
             <div>
                 <div onClick={() => dispatch(getStratagems())}>Stratagems</div>
             </div>
-            <div>Manuals</div>
+            <div>Manuals <span onClick={() => setShowManualForm(true)}>➕</span></div>
+
+            {showManualForm ? <ManualForm 
+            hidden={showManualForm} 
+            setShowManualForm={setShowManualForm} 
+            isNewManual={true}
+            manual={{}}
+            /> : ''}
+
             <div className='manuals-list' onClick={selectManual}>
                 {Object.values(manuals).map(manual => (
                     <ManualLink key={manual.id} manual={manual}/>
