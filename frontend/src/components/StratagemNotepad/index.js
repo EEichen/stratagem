@@ -40,7 +40,7 @@ const StratagemNotepad = () => {
                     onChange={e => setText(e.target.value)}
                     ></textarea>
                 </div>
-                <img src={imageUrl} alt=""/>
+                {imageUrl ? <img src={imageUrl} alt=""/>: ''}
             </div>
         )
     }else return ''
