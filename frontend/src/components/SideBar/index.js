@@ -6,6 +6,7 @@ import { createStratagem, getStratagems, getStratagemsWithId } from "../../store
 import Search from "../Search";
 import ManualForm from "./ManualForm";
 import ManualLink from "./ManualLink";
+import './SideBar.css'
 
 const SideBar = () => {
     const dispatch = useDispatch();
@@ -38,14 +39,16 @@ const SideBar = () => {
 
 
     return(
-        <div>
-            Side Bar (placeholder)
-
-            <Search 
-            selectManual={selectManual} 
-            />
-            <div>
-                <button disabled={!isSelected} onClick={e => dispatch(createStratagem(selectedManual))}>
+        <div className='side-bar'>
+            <div className='search'>
+                <Search selectManual={selectManual} />
+            </div>
+            <div className='add-stratagem'>
+                <button 
+                disabled={!isSelected} 
+                onClick={e => dispatch(createStratagem(selectedManual))}
+                className='add-stratagem-button'
+                >
                 ➕ Add a Stratagem
                 </button>
             </div>
@@ -59,7 +62,7 @@ const SideBar = () => {
                 setShowManualForm={setShowManualForm} 
                 isNewManual={true}
                 manual={{}}
-            /> : ''}
+                /> : ''}
 
             <div className='manuals-list' onClick={selectManual}>
                 {Object.values(manuals).reverse().map(manual => (
