@@ -10,7 +10,7 @@ const StratagemsPreviewArea = () => {
             <div>strat preview area (placeholder)</div>
 
             <div className='stratagems-list'>
-                {Object.values(stratagems).map(stratagem => (
+                {Object.values(stratagems).reverse().map(stratagem => (
                     <Preview key={stratagem.id} stratagem={stratagem}/>
                 ))}
             </div>

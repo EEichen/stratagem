@@ -62,7 +62,7 @@ const SideBar = () => {
             /> : ''}
 
             <div className='manuals-list' onClick={selectManual}>
-                {Object.values(manuals).map(manual => (
+                {Object.values(manuals).reverse().map(manual => (
                     <ManualLink key={manual.id} manual={manual}/>
                 ))}
             </div>
