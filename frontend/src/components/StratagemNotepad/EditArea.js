@@ -17,14 +17,18 @@ const EditArea = ({stratagem}) => {
     
     useEffect(() => {
         if (!stratagem.id) history.push('/')
-        // setSaved(false);
+        setSaved(false);
+
         let timeout;
-        if(!initalLoad){
+        if(title.length > 0 && title.length < 200){
+
+            if(!initalLoad){
                 timeout = setTimeout(() => {
-                dispatch(editStratagem({ id, title, text, imageUrl }))
-                setSaved(true)
-                
-            }, 800);
+                    dispatch(editStratagem({ id, title, text, imageUrl }))
+                    setSaved(true)
+                    
+                }, 800);
+            }
         }
 
         return () => clearTimeout(timeout);

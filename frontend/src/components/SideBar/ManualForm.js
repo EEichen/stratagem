@@ -9,17 +9,19 @@ const ManualForm = ({manual, setShowManualForm, isNewManual}) => {
     const [titleInput, setTitleInput] = useState(manual.title ? manual.title : '')
 
     const onSave = () => {
-        
-        if(isNewManual){
-            dispatch(createManual({title: titleInput}))
-        }
-        else {
-            const newManual = {...manual}
-            newManual.title = titleInput;
-            dispatch(editManual(newManual))
-        }
+        if(titleInput.length < 0 && titleInput.length > 50){
 
-        setShowManualForm(false);
+            if(isNewManual){
+                dispatch(createManual({title: titleInput}))
+            }
+            else {
+                const newManual = {...manual}
+                newManual.title = titleInput;
+                dispatch(editManual(newManual))
+            }
+            
+            setShowManualForm(false);
+        }
     }
 
     return(
