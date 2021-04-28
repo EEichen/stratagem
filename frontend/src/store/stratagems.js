@@ -57,7 +57,7 @@ export const editStratagem = (stratagem) => async (dispatch) => {
         body: JSON.stringify(stratagem)
     })
 
-    const newStratagem = await res.json();
+    const {newStratagem} = await res.json();
 
     dispatch(addStratagem(newStratagem))
 }
