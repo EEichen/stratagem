@@ -38,7 +38,9 @@ const SideBar = () => {
         <div>
             Side Bar (placeholder)
 
-            <Search />
+            <Search 
+            selectManual={selectManual} 
+            />
             <div>
                 <button disabled={!isSelected} onClick={e => dispatch(createStratagem(selectedManual))}>
                 ➕ Add a Stratagem

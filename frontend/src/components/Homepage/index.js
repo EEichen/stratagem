@@ -19,7 +19,7 @@ const Homepage = () => {
                 <SideBar />
                 <StratagemsPreviewArea />
                 <Route path='/stratagem/:id'>
-
+                    
                 </Route>
             </div>
         )

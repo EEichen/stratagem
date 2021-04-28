@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
 
-const SearchResults = () => {
+const SearchResults = ({selectManual}) => {
     const {
         foundManuals, 
         foundStratagems
@@ -19,9 +19,14 @@ const SearchResults = () => {
             
             <div>
                 {foundManuals[0] ? <div>Manuals:</div> : ''}
-                <div className='search-manuals'>
+                <div className='search-manuals' onClick={selectManual}>
                     {foundManuals.map(manual => (
-                        <div key={manual.id}>(placeholder) {manual.title}</div>
+                        <div 
+                        key={manual.id} 
+                        id={`manual-${manual.id}`}
+                        >
+                            {manual.title}
+                        </div>
                         ))}
                 </div>
             </div>

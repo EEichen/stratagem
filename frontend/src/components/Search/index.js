@@ -4,7 +4,7 @@ import { getSearchResults } from "../../store/search";
 import SearchResults from "./SearchResults";
 
 
-const Search = () => {
+const Search = ({selectManual}) => {
     const dispatch = useDispatch();
 
     const [input, setInput] = useState('')
@@ -27,7 +27,7 @@ const Search = () => {
             value={input}
             onChange={onSearch}
              />
-             <SearchResults />
+             <SearchResults selectManual={selectManual}/>
         </div>
     )
 }
