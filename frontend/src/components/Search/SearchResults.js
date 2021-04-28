@@ -19,9 +19,9 @@ const SearchResults = ({selectManual}) => {
     }
 
     return(
-        <div className='search-results'>
-            <div>
-                {Object.keys(foundStratagems)[0] ? <div>Stratagems:</div> : ''}
+        <div >
+            {Object.keys(foundStratagems)[0] ? <div className='search-label'>Stratagems:</div> : ''}
+            <div className='search-results'>
                 <div className='search-strats' onClick={getStrat}>
                     {Object.values(foundStratagems).map(stratagem => (
                         <div 
@@ -34,8 +34,8 @@ const SearchResults = ({selectManual}) => {
                 </div>
             </div>
             
-            <div>
-                {Object.keys(foundManuals)[0] ? <div>Manuals:</div> : ''}
+            {Object.keys(foundManuals)[0] ? <div className='search-label'>Manuals:</div> : ''}
+            <div className='search-results'>
                 <div className='search-manuals' onClick={selectManual}>
                     {Object.values(foundManuals).map(manual => (
                         <div 
