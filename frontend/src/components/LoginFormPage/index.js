@@ -26,7 +26,11 @@ const LoginForm = () => {
                 if(data && data.errors) setErrors(data.errors)
         })
     } 
-
+    
+    const loginDemoUser = (e) => {
+        e.preventDefault()
+        return dispatch(login('DemoUser', 'password'))
+    }
     
     return (
         <div>
@@ -50,6 +54,7 @@ const LoginForm = () => {
                 onChange={e => setPassword(e.target.value)}
                 />
                 <button type='submit'>Log In!</button>
+                <button onClick={loginDemoUser}>Demo User</button>
             </form>
         </div>
     )
