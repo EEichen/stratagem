@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
+import { useHistory } from "react-router";
 import { getManuals } from "../../store/manuals";
 import { createStratagem, getStratagems, getStratagemsWithId } from "../../store/stratagems";
 import Search from "../Search";
@@ -9,6 +10,7 @@ import ManualLink from "./ManualLink";
 const SideBar = () => {
     const dispatch = useDispatch();
     const manuals = useSelector(state => state.manuals);
+    const history = useHistory();
 
     const [isSelected, setIsSelected] = useState(false);
     const [selectedManual, setSelectedManual] = useState('');
@@ -30,6 +32,7 @@ const SideBar = () => {
 
 
             dispatch(getStratagemsWithId(id))
+            history.push('/')
         }
     }
 

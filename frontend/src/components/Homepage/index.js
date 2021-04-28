@@ -5,6 +5,7 @@ import StratagemsPreviewArea from '../StratagemsPreviewArea'
 import SplashPage from './SplashPage'
 import './Homepage.css'
 import { Route } from 'react-router'
+import StratagemNotepad from '../StratagemNotepad'
 
 
 
@@ -19,7 +20,7 @@ const Homepage = () => {
                 <SideBar />
                 <StratagemsPreviewArea />
                 <Route path='/stratagem/:id'>
-                    
+                    <StratagemNotepad />
                 </Route>
             </div>
         )

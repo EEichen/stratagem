@@ -28,7 +28,7 @@ const SearchResults = ({selectManual}) => {
                         key={stratagem.id} 
                         id={`stratagem-${stratagem.id}`}
                         >
-                            (placeholder) {stratagem.title}
+                            {stratagem.title}
                         </div>
                         ))}
                 </div>
