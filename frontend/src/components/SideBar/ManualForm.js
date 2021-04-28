@@ -9,7 +9,7 @@ const ManualForm = ({manual, setShowManualForm, isNewManual}) => {
     const [titleInput, setTitleInput] = useState(manual.title ? manual.title : '')
 
     const onSave = () => {
-        if(titleInput.length < 0 && titleInput.length > 50){
+        if(titleInput.length > 0 && titleInput.length < 50){
 
             if(isNewManual){
                 dispatch(createManual({title: titleInput}))
