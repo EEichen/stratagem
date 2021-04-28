@@ -64,7 +64,7 @@ export const editStratagem = (stratagem) => async (dispatch) => {
 
 
 export const deleteStratagem = (id) => async (dispatch) => {
-    const res = await csrfFetch(`/api/manuals/${id}`,{
+    const res = await csrfFetch(`/api/stratagems/${id}`,{
         method: 'DELETE'
     })
 

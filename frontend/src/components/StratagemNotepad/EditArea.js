@@ -1,7 +1,7 @@
 import {useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
-import { editStratagem } from '../../store/stratagems';
+import { deleteStratagem, editStratagem } from '../../store/stratagems';
 
 const EditArea = ({stratagem}) => {
     const dispatch = useDispatch();
@@ -54,7 +54,8 @@ const EditArea = ({stratagem}) => {
                     setImageUrl(e.target.value)
                     setInitialLoad(false)
                 }}
-            />
+                />
+            <button onClick={() => dispatch(deleteStratagem(id))}>Delete</button>
             <div>
                 <textarea 
                 value={text}
