@@ -12,7 +12,7 @@ const SearchResults = () => {
                 {foundStratagems[0] ? <div>Stratagems:</div> : ''}
                 <div className='search-strats'>
                     {foundStratagems.map(stratagem => (
-                        <div>(placeholder) {stratagem.title}</div>
+                        <div key={stratagem.id}>(placeholder) {stratagem.title}</div>
                         ))}
                 </div>
             </div>
@@ -21,7 +21,7 @@ const SearchResults = () => {
                 {foundManuals[0] ? <div>Manuals:</div> : ''}
                 <div className='search-manuals'>
                     {foundManuals.map(manual => (
-                        <div>(placeholder) {manual.title}</div>
+                        <div key={manual.id}>(placeholder) {manual.title}</div>
                         ))}
                 </div>
             </div>
