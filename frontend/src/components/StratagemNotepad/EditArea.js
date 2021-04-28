@@ -12,16 +12,16 @@ const EditArea = ({stratagem}) => {
     const [title, setTitle] = useState(stratagem ? stratagem.title : '');
     const [text, setText] = useState(stratagem ? stratagem.text : '');
     const [imageUrl, setImageUrl] = useState(stratagem ? stratagem.imageUrl : '')
-    const [saved, setSaved] = useState()
+    const [saved, setSaved] = useState(false)
     
     useEffect(() => {
         if (!stratagem.id) history.push('/')
-        setSaved(false);
+        // setSaved(false);
         const timeout = setTimeout(() => {
             dispatch(editStratagem({ id, title, text, imageUrl }))
             setSaved(true)
 
-        }, 1500);
+        }, 800);
 
         return () => clearTimeout(timeout);
 
@@ -47,7 +47,7 @@ const EditArea = ({stratagem}) => {
                 onChange={e => setText(e.target.value)}
                 ></textarea>
             </div>
-            <div>{saved ? 'saved' : 'saving...'}</div>
+            <div>{saved ? 'saved' : ''}</div>
             {imageUrl ? <img src={imageUrl} alt=""/>: ''}
         </div>
     )

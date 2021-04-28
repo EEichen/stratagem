@@ -16,7 +16,7 @@ const Search = ({selectManual}) => {
     useEffect(() => {
         dispatch(getSearchResults(input))
         
-    }, [input])
+    }, [input, dispatch])
 
     return (
         <div>

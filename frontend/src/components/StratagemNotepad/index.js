@@ -5,7 +5,10 @@ import EditArea from "./EditArea"
 
 const StratagemNotepad = () => {
     const {id} = useParams()
-    const stratagem = useSelector(state => state.stratagems[id])
+    const stratagem = useSelector(
+        state => state.stratagems[id] ? state.stratagems[id] :
+            state.searchResults.foundStratagems[id]
+        )
 
 
     if(stratagem){
