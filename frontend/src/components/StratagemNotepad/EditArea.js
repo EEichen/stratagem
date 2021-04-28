@@ -13,19 +13,23 @@ const EditArea = ({stratagem}) => {
     const [text, setText] = useState(stratagem ? stratagem.text : '');
     const [imageUrl, setImageUrl] = useState(stratagem ? stratagem.imageUrl : '')
     const [saved, setSaved] = useState(false)
+    const [initalLoad, setInitialLoad] = useState(true)
     
     useEffect(() => {
         if (!stratagem.id) history.push('/')
         // setSaved(false);
-        const timeout = setTimeout(() => {
-            dispatch(editStratagem({ id, title, text, imageUrl }))
-            setSaved(true)
-
-        }, 800);
+        let timeout;
+        if(!initalLoad){
+                timeout = setTimeout(() => {
+                dispatch(editStratagem({ id, title, text, imageUrl }))
+                setSaved(true)
+                
+            }, 800);
+        }
 
         return () => clearTimeout(timeout);
 
-    }, [title, text, imageUrl, dispatch, id, history, stratagem.id])
+    }, [title, text, imageUrl, dispatch, id, history, stratagem.id, initalLoad])
 
     return(
         <div>
@@ -33,18 +37,27 @@ const EditArea = ({stratagem}) => {
             type="text"
             placeholder='Title'
             value={title}
-            onChange={e => setTitle(e.target.value)}
+            onChange={e => {
+                setTitle(e.target.value)
+                setInitialLoad(false)
+            }}
             />
             <input
                 type="text"
                 placeholder='Image Url'
                 value={imageUrl}
-                onChange={e => setImageUrl(e.target.value)}
+                onChange={e => {
+                    setImageUrl(e.target.value)
+                    setInitialLoad(false)
+                }}
             />
             <div>
                 <textarea 
                 value={text}
-                onChange={e => setText(e.target.value)}
+                onChange={e => {
+                    setText(e.target.value)
+                    setInitialLoad(false)
+                }}
                 ></textarea>
             </div>
             <div>{saved ? 'saved' : ''}</div>

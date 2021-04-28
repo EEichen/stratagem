@@ -35,9 +35,13 @@ export const createManual = (manual) => async (dispatch) => {
         method: 'POST',
         body: JSON.stringify(manual)
     })
+    
+    if(!res.ok) throw res;
 
     const {newManual} = await res.json();
     dispatch(addManual(newManual))
+
+    return res;
 } 
 
 
@@ -47,9 +51,13 @@ export const editManual = (manual) => async (dispatch) => {
         body: JSON.stringify(manual)
     })
 
+    if(!res.ok) throw res;
+
     const {newManual} = await res.json();
 
     dispatch(addManual(newManual))
+
+    return res
 }
 
 
