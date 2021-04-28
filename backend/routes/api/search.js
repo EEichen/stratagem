@@ -36,8 +36,20 @@ async function searchStratagems(input, userId){
 router.get('/:input', requireAuth, asyncHandler(async (req, res) => {
     const userId = req.user.id
     const input = req.params.input
-    const foundManuals = await searchManuals(input, userId)
-    const foundStratagems = await searchStratagems(input, userId)
+    const arrayfoundManuals = await searchManuals(input, userId)
+    const arrayfoundStratagems = await searchStratagems(input, userId)
+
+    
+    const foundManuals = {}
+    arrayfoundManuals.forEach(manual => {
+        foundManuals[manual.id] = manual;
+    })
+
+    const foundStratagems = {}
+
+    arrayfoundStratagems.forEach(stratagem => {
+        foundStratagems[stratagem.id] = stratagem;
+    })
 
     res.json({foundManuals ,foundStratagems})
 

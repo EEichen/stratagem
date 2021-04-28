@@ -15,12 +15,12 @@ export const getSearchResults = (input) => async (dispatch) => {
         
         dispatch(setResults(results))
     }
-    else dispatch(setResults({foundManuals: [], foundStratagems: [] }))
+    else dispatch(setResults({foundManuals: {}, foundStratagems: {} }))
 
 }
 
 //reducer-----------------------------------------------------------------------
-const initialState = { foundManuals: [], foundStratagems: [] };
+const initialState = { foundManuals: {}, foundStratagems: {} };
 
 export default function searchReducer(state = initialState, action){
     switch(action.type){
