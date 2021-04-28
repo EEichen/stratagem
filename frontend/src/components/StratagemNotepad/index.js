@@ -7,6 +7,9 @@ const StratagemNotepad = () => {
     const {id} = useParams()
     const stratagem = useSelector(state => state.stratagems[id])
     const dispatch = useDispatch();
+    const history = useHistory();
+
+    if(!stratagem) history.push('/')
 
     const [title, setTitle] = useState(stratagem ? stratagem.title : '');
     const [text, setText] = useState(stratagem ? stratagem.text : '');
@@ -32,13 +35,12 @@ const StratagemNotepad = () => {
                     onChange={e => setImageUrl(e.target.value)}
                 />
                 <div>
-                    <span 
-                    contentEditable 
-                    innerText={text}
-                    onChange={e => setText(e.target.innerText)}
-                    ></span>
+                    <textarea 
+                    value={text}
+                    onChange={e => setText(e.target.value)}
+                    ></textarea>
                 </div>
-                <div>test {text}</div>
+                <img src={imageUrl} alt=""/>
             </div>
         )
     }else return ''
