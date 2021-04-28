@@ -12,7 +12,9 @@
 }
 
 .add-stratagem{
-    margin: 10%;
+
+    margin-top: 80%;
+    margin-bottom: 10%;
     color: wheat;
 }
 
@@ -22,4 +24,5 @@
     padding: 5px;
     background-color:rgba(245, 222, 179, 0.95);
     border-radius: 10px;
+    color: black;
 }

@@ -1,0 +1,7 @@
+.search-results{
+    overflow: scroll;
+    max-height: 20%;
+    padding-top: 5px;
+    position: absolute;
+    background-color: wheat;
+}

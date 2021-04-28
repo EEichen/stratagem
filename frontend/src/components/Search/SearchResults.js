@@ -19,7 +19,7 @@ const SearchResults = ({selectManual}) => {
     }
 
     return(
-        <div>
+        <div className='search-results'>
             <div>
                 {Object.keys(foundStratagems)[0] ? <div>Stratagems:</div> : ''}
                 <div className='search-strats' onClick={getStrat}>

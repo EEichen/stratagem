@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
 import { getSearchResults } from "../../store/search";
 import SearchResults from "./SearchResults";
+import './Search.css'
 
 
 const Search = ({selectManual}) => {
