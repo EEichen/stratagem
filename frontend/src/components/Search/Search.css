@@ -1,5 +1,5 @@
 .search-results{
-    overflow: scroll;
+    overflow-y: scroll;
     max-height: 100px;
     padding: 5px;
     position: relative;

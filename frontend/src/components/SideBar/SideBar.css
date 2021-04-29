@@ -91,6 +91,6 @@
 }
 
 .manuals-list{
-    overflow: scroll;
     max-height: 95%;
+    overflow-y: scroll;
 }

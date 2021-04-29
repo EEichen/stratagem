@@ -16,7 +16,7 @@
 }
 
 .stratagems-list{
-    overflow: scroll;
+    overflow-y: scroll;
     max-height: 95%;
 }
 
@@ -28,7 +28,7 @@
     min-height: 5.5em;
     max-height: 5.5em;
     margin-bottom: 5px;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .preview:hover{
