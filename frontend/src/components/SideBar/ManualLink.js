@@ -6,7 +6,7 @@ const ManualLink = ({manual}) => {
 
     
     return(
-        <div>
+        <div className='manual'>
             <div id={`manual-${manual.id}`}>
                 {manual.title} 
                 <button 

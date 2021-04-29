@@ -14,8 +14,8 @@ const ManualOptions = ({manual}) => {
 
     return (
         <div>
-            <button onClick={()=> setShowManualForm(true)}>Edit</button>
-            <button onClick={onDelete}>Delete</button>
+            <button className='button option' onClick={()=> setShowManualForm(true)}>Edit</button>
+            <button className='button option' onClick={onDelete}>Delete</button>
             {
             showManualForm ? <ManualForm
                 setShowManualForm={setShowManualForm}
