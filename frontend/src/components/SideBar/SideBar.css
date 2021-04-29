@@ -5,17 +5,22 @@
     min-width: 220px;
     box-sizing: border-box;
     padding: 1%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     margin-right: 1%;
     justify-content:top;
     position: relative;
     height: 98.5%;
+    border-radius: 10px;
 }
 
 .add-stratagem{
     margin-top: 10%;
     margin-bottom: 10%;
-    color: wheat;
+}
+
+.add-stratagem-button{
+    background-color: lightgrey;
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
 }
 
 .search{
@@ -26,4 +31,55 @@
     border-radius: 10px;
     width: 90%;
     color: black;
+}
+
+.stratagems{
+    padding: 5px;
+}
+
+.stratagems:hover{
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
+}
+
+.add-manual{
+
+    font-size: .5em;
+    margin: 5px;
+}
+
+.button{
+    background-color: lightgrey;
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
+}
+
+.save, .cancel{
+    margin: 3px;
+}
+
+.manual-form{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.title-input{
+    margin-bottom: 5px;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.manuals{
+    margin: 5px;
+}
+
+.manual-options{
+    color: white;
+    border: none;
+    margin-left: 5px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.manual-options:hover{
+    background-color: rgba(255, 255, 255, 0.3);
 }

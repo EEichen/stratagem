@@ -9,9 +9,11 @@ const ManualLink = ({manual}) => {
         <div>
             <div id={`manual-${manual.id}`}>
                 {manual.title} 
-                <span onClick={
+                <button 
+                className='manual-options'
+                onClick={
                     e => setShowOptions( (prevShowOptions) => !prevShowOptions)
-                    }>...</span>
+                    }>...</button>
             </div>
             {showOptions ? <ManualOptions manual={manual}/> : ''}
         </div>

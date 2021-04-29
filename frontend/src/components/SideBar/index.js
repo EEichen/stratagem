@@ -8,13 +8,13 @@ import ManualForm from "./ManualForm";
 import ManualLink from "./ManualLink";
 import './SideBar.css'
 
-const SideBar = () => {
+const SideBar = ({ selectedManual, setSelectedManual}) => {
     const dispatch = useDispatch();
     const manuals = useSelector(state => state.manuals);
     const history = useHistory();
 
     const [isSelected, setIsSelected] = useState(false);
-    const [selectedManual, setSelectedManual] = useState('');
+    // const [selectedManual, setSelectedManual] = useState('');
     const [showManualForm, setShowManualForm] = useState(false);
     // console.log(manuals)
     
@@ -54,9 +54,25 @@ const SideBar = () => {
             </div>
 
             <div>
-                <div onClick={() => dispatch(getStratagems())}>Stratagems</div>
+                <div
+                className='stratagems' 
+                onClick={() => dispatch(getStratagems())}
+                >
+                    Stratagems
+                </div>
             </div>
-            <div>Manuals <span onClick={() => setShowManualForm(true)}>➕</span></div>
+            <div
+                className='manuals'
+            >Manuals 
+                <span
+                    onClick={() => setShowManualForm(true)}
+                    >
+                    <button className='add-manual button'>
+
+                     ➕
+                    </button>
+                </span>
+            </div>
 
             {showManualForm ? <ManualForm  
                 setShowManualForm={setShowManualForm} 

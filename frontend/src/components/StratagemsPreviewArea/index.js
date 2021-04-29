@@ -2,12 +2,17 @@ import { useSelector } from "react-redux"
 import Preview from "./Preview"
 
 
-const StratagemsPreviewArea = () => {
+const StratagemsPreviewArea = ({selectedManual}) => {
     const stratagems = useSelector(state => state.stratagems)
+    const manual = useSelector(state => state.manuals[selectedManual])
 
     return(
         <div>
-            <div>strat preview area (placeholder)</div>
+            <div
+        
+            >
+                {manual ? `${manual.title}:` : ''}
+            </div>
 
             <div className='stratagems-list'>
                 {Object.values(stratagems).reverse().map(stratagem => (

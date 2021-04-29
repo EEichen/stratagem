@@ -25,17 +25,18 @@ const ManualForm = ({manual, setShowManualForm, isNewManual}) => {
     }
 
     return(
-        <div className='manualForm'>
+        <div className='manual-form'>
             <label htmlFor="titleInput">Manual Title: </label>
             <input 
             type="text" 
             name='titleInput' 
             id='titleInput' 
+            className='title-input'
             value={titleInput}
             onChange={e => setTitleInput(e.target.value)}
             />
-            <button onClick={onSave}>Save</button>
-            <button onClick={() => setShowManualForm(false)}>Cancel</button>
+            <button className='button save' onClick={onSave}>Save</button>
+            <button className='button cancel' onClick={() => setShowManualForm(false)}>Cancel</button>
         </div>
     )
 }
