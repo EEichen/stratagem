@@ -19,35 +19,39 @@ const SearchResults = ({selectManual}) => {
     }
 
     return(
-        <div >
-            {Object.keys(foundStratagems)[0] ? <div className='search-label'>Stratagems:</div> : ''}
-            <div className='search-results'>
-                <div className='search-strats' onClick={getStrat}>
-                    {Object.values(foundStratagems).map(stratagem => (
-                        <div 
-                        key={stratagem.id} 
-                        id={`stratagem-${stratagem.id}`}
-                        >
-                            {stratagem.title}
-                        </div>
-                        ))}
+        <div>
+            {Object.keys(foundStratagems)[0] || Object.keys(foundManuals)[0] ? <>
+                {Object.keys(foundStratagems)[0] ? <div className='search-label'>Stratagems:</div> : ''}
+                <div className='search-results'>
+                    <div className='search-strats' onClick={getStrat}>
+                        {Object.values(foundStratagems).map(stratagem => (
+                            <div 
+                                key={stratagem.id} 
+                                id={`stratagem-${stratagem.id}`}
+                                className='result'
+                            >
+                                {stratagem.title}
+                            </div>
+                            ))}
+                    </div>
                 </div>
-            </div>
-            
-            {Object.keys(foundManuals)[0] ? <div className='search-label'>Manuals:</div> : ''}
-            <div className='search-results'>
-                <div className='search-manuals' onClick={selectManual}>
-                    {Object.values(foundManuals).map(manual => (
-                        <div 
-                        key={manual.id} 
-                        id={`manual-${manual.id}`}
-                        >
-                            {manual.title}
-                        </div>
-                        ))}
+                        
+                {Object.keys(foundManuals)[0] ? <div className='search-label'>Manuals:</div> : ''}
+                <div className='search-results'>
+                    <div className='search-manuals' onClick={selectManual}>
+                        {Object.values(foundManuals).map(manual => (
+                            <div 
+                                key={manual.id} 
+                                id={`manual-${manual.id}`}
+                                className='result'
+                            >
+                                {manual.title}
+                            </div>
+                            ))}
+                    </div>
                 </div>
-            </div>
 
+            </> : ''}
         </div>
     )
 }
