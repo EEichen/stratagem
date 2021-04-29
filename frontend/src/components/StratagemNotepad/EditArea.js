@@ -36,37 +36,49 @@ const EditArea = ({stratagem}) => {
     }, [title, text, imageUrl, dispatch, id, history, stratagem.id, initalLoad])
 
     return(
-        <div>
+        <div className='edit-area'>
             <input 
             type="text"
             placeholder='Title'
+            className='edit-title'
             value={title}
             onChange={e => {
                 setTitle(e.target.value)
                 setInitialLoad(false)
             }}
             />
+            <button 
+                className='button delete-button' 
+                onClick={() => dispatch(deleteStratagem(id))}
+            >
+                Delete
+            </button>
+            <span className='save-notif'>{saved ? 'saved' : ''}</span>
             <input
                 type="text"
                 placeholder='Image Url'
+                className='edit-url'
                 value={imageUrl}
                 onChange={e => {
                     setImageUrl(e.target.value)
                     setInitialLoad(false)
                 }}
                 />
-            <button onClick={() => dispatch(deleteStratagem(id))}>Delete</button>
-            <div>
+            <div className='text-img-area'>
                 <textarea 
+                className='edit-text'
                 value={text}
                 onChange={e => {
                     setText(e.target.value)
                     setInitialLoad(false)
                 }}
-                ></textarea>
+                >
+
+                </textarea>
+                {imageUrl ? <img className='edit-area-image' src={imageUrl} alt=""/>: ''}
+
             </div>
-            <div>{saved ? 'saved' : ''}</div>
-            {imageUrl ? <img src={imageUrl} alt=""/>: ''}
+            
         </div>
     )
 }

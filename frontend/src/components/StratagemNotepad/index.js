@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import { useParams } from "react-router"
 import EditArea from "./EditArea"
+import './StratagemNotepad.css'
 
 
 const StratagemNotepad = () => {

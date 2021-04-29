@@ -6,6 +6,7 @@
     min-height: 500px;
     max-height: 4000px;
     height: 99%;
+    width: 100%;
 }
 
 html, body{
@@ -22,12 +23,12 @@ body{
     height: 96.5%;
 }
 
-input{
-    background-color: rgba(245, 222, 179, 1);;
+input, textarea{
+    background-color: rgba(245, 222, 179, 1);
     border-top: none;
     border-left:none;
     border-right: none;
-    border-bottom: 1px solid rgba(0, 0, 0, .25);;
+    border-bottom: 1px solid rgba(0, 0, 0, .25);
 
 }
 
