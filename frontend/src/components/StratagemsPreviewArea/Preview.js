@@ -3,11 +3,13 @@ import { useHistory } from "react-router-dom"
 const Preview = ({stratagem}) => {
     let history  = useHistory();
     return (
-        <div onClick={() => history.push(`/stratagem/${stratagem.id}`)}>
-            <div>
+        <div
+            className='preview'
+            onClick={() => history.push(`/stratagem/${stratagem.id}`)}>
+            <div className='strat-title'>
                 {stratagem.title}
             </div>
-            <div>{stratagem.text}</div>
+            <div className='preview-text'>{stratagem.text}</div>
         </div>
     )
 }

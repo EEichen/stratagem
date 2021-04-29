@@ -12,7 +12,7 @@ const StratagemsPreviewArea = ({selectedManual}) => {
             <div
                 className='manual-selected'
             >
-                {manual ? `${manual.title}:` : ''}
+                {manual ? `${manual.title}` : ''}
             </div>
 
             <div className='stratagems-list'>
