@@ -9,7 +9,6 @@
     margin-right: 1%;
     justify-content:top;
     position: relative;
-    height: 98.5%;
     border-radius: 10px;
 }
 
@@ -24,7 +23,6 @@
 }
 
 .search{
-    /* margin: 5%; */
     border: 2px solid rgb(133, 119, 93);
     padding: 2px;
     background-color:rgba(245, 222, 179, 1);

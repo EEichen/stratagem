@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux"
 import Preview from "./Preview"
+import './StratagemsPreviewArea.css'
 
 
 const StratagemsPreviewArea = ({selectedManual}) => {
@@ -7,9 +8,9 @@ const StratagemsPreviewArea = ({selectedManual}) => {
     const manual = useSelector(state => state.manuals[selectedManual])
 
     return(
-        <div>
+        <div className='stratagem-preview-area'>
             <div
-        
+                className='manual-selected'
             >
                 {manual ? `${manual.title}:` : ''}
             </div>
