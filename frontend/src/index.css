@@ -13,7 +13,7 @@ body{
 }
 
 #root{
-    height: 96.5%;
+    height: 94.5%;
 }
 
 html, body{
@@ -35,4 +35,16 @@ input, textarea{
 input:focus,
 textarea:focus{
     outline: 0;
+}
+
+.lo-input{
+    font-size: 1.2em;
+    padding: 5px;
+    margin-bottom: .7em;
+}
+
+.submit-button{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 5px;
 }

@@ -33,28 +33,37 @@ const LoginForm = () => {
     }
     
     return (
-        <div>
-            <form onSubmit={onSubmit}>
+        <div className='sign-up-page'>
+            <h1 className='sign-up-title'>Log In Here!</h1>
+            <form className='sign-up' onSubmit={onSubmit}>
                 <ul>
                     {errors.map((error, i) => <li key={i}>{error}</li> )}
                 </ul>
                 <input 
-                type="text" 
-                name="" 
-                id="" 
-                placeholder='username' 
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                    className='lo-input'
+                    type="text" 
+                    name="" 
+                    id="" 
+                    placeholder='username' 
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
                 />
 
                 <input 
-                type="text"
-                placeholder='password' 
-                value={password} 
-                onChange={e => setPassword(e.target.value)}
+                    className='lo-input'
+                    type="text"
+                    placeholder='password' 
+                    value={password} 
+                    onChange={e => setPassword(e.target.value)}
                 />
-                <button type='submit'>Log In!</button>
-                <button onClick={loginDemoUser}>Demo User</button>
+                <button 
+                    className='button submit-button'  type='submit'>Log In!</button>
+                <button 
+                    className='button submit-button'  
+                    onClick={loginDemoUser}
+                >
+                        Demo User
+                </button>
             </form>
         </div>
     )
