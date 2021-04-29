@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
 import { NavLink } from "react-router-dom";
-import ProfileButton from './ProfileButton'
+import ProfileDisplay from './ProfileButton'
 import './Navigation.css'
 
 
@@ -12,7 +12,7 @@ const Navigation = ({ isLoaded }) =>{
 
     if(sessionUser){
         links = (
-            <ProfileButton user={sessionUser} />
+            <ProfileDisplay user={sessionUser} />
         )
     }
     else {

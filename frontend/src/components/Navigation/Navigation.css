@@ -22,6 +22,20 @@ a:hover{
 
 .welcome{
     position: absolute;
-    left: 37%;
+    left: 40%;
     top: .05%;
+}
+
+.profile{
+    padding-top: 1em;
+    display: flex;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.profile-display{
+    margin-right: 5px;
+    font-size: larger;
 }
