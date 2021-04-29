@@ -22,8 +22,10 @@ a:hover{
 
 .welcome{
     position: absolute;
-    left: 40%;
+    width: 99%;
     top: .05%;
+    text-align: center;
+    z-index: -1;
 }
 
 .profile{
