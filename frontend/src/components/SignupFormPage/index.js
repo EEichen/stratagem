@@ -32,20 +32,22 @@ const SignupForm = () => {
     }
 
     return (
-        <div>
-            <h1>Sign Up Here!</h1>
-            <form onSubmit={onSubmit}>
+        <div className='sign-up-page'>
+            <h1 className='sign-up-title'>Sign Up Here!</h1>
+            <form className='sign-up' onSubmit={onSubmit}>
                 <ul>
                     {errors.map((error, i) => <li key={i}>{error}</li>)}
                 </ul>
                 <input 
-                type="text" 
-                placeholder='Username' 
-                value={username}
-                onChange={e => setUsername(e.target.value)}
+                    className='lo-input'
+                    type="text" 
+                    placeholder='Username' 
+                    value={username}
+                    onChange={e => setUsername(e.target.value)}
                 />
 
                 <input
+                    className='lo-input'
                     type="text"
                     placeholder='Email'
                     value={email}
@@ -53,18 +55,25 @@ const SignupForm = () => {
                 />
 
                 <input
+                    className='lo-input'
                     type="text"
                     placeholder='Password'
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                 />
                 <input
+                    className='lo-input'
                     type="text"
                     placeholder='Confirm Password'
                     value={confPassword}
                     onChange={e => setConfPassword(e.target.value)}
                 />
-                <button type='submit'>Sign Up!</button>
+                <button 
+                    className='button submit-button' 
+                    type='submit'
+                    >
+                        Sign Up!
+                </button>
             </form>
         </div>
     )

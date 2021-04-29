@@ -1,3 +1,27 @@
 a{
-    color: wheat
+    color: wheat;
+    font: bold 11px;
+    text-decoration: none;
+    padding: 6px;
+
+    margin: 7px;
+}
+
+a:hover{
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    max-height: 50px;
+    min-height: 50px;
+}
+
+.welcome{
+    position: absolute;
+    left: 45%;
+    top: .05%;
 }

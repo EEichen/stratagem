@@ -1,38 +1,13 @@
 .homepage{
     display: flex;
-    color: seashell;
+    color: wheat;
     position: relative;
     padding-top: 1%;
     min-height: 500px;
     max-height: 4000px;
-    height: 99%;
+    height: 98%;
     width: 100%;
 }
 
-html, body{
-    min-height: 99%;
-    height: 98%;
-    width: 99%;
-}
 
-body{
-    background-color: rgba(0, 0, 0, .8);
-}
 
-#root{
-    height: 96.5%;
-}
-
-input, textarea{
-    background-color: rgba(245, 222, 179, 1);
-    border-top: none;
-    border-left:none;
-    border-right: none;
-    border-bottom: 1px solid rgba(0, 0, 0, .25);
-
-}
-
-input:focus,
-textarea:focus{
-    outline: 0;
-}

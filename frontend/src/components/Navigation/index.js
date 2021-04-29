@@ -18,15 +18,16 @@ const Navigation = ({ isLoaded }) =>{
     else {
         links = (
             <>
+            <NavLink exact to='/'>Home</NavLink>
             <NavLink to='/login'>Log In</NavLink>
             <NavLink to='/signup'>Sign Up</NavLink>
+            <h1 className='welcome'>Welcome to Stratagem!</h1>
             </>
         )
     }
 
     return (
-        <nav>
-            <NavLink exact to='/'>Home</NavLink>
+        <nav className='nav-bar'>
             {isLoaded && links}
         </nav>
     )
