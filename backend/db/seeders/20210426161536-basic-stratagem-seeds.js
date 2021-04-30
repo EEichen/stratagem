@@ -216,12 +216,23 @@ module.exports = {
         manualId: 9
       },
       {
-        title: 'Glance and see the solution method',
+        title: 'Glance and see the solution',
         text: 'Instantly see the path by glancing at it',
-        imageUrl: '',
+        imageUrl: 'https://github.com/EEichen/stratagem/blob/main/backend/images/50%20by%2050%20orthogonal%20maze.png?raw=true',
         manualId: 10
       },
-
+      {
+        title: 'Live on Pluto',
+        text: 'Freeze to death',
+        imageUrl: '',
+        manualId: 11
+      },
+      {
+        title: 'search for this Stratagem',
+        text: 'Type in the search area',
+        imageUrl: '',
+        manualId: 14
+      },
       
   ], {});
   },
