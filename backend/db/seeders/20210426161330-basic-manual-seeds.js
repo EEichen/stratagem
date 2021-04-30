@@ -34,42 +34,38 @@ module.exports = {
         userId: 1
       },
       {//6
-        title: 'algo solving',
-        userId: 1
-      },
-      {//7
         title: 'general stratagems',
         userId: 1
       },
-      {//8
+      {//7
         title: 'generic strategy games stratagems',
         userId: 1
       },
-      {//9
+      {//8
         title: 'how I made some decent tasting fish',
         userId: 1
       },
-      {//10
+      {//9
         title: 'other Problem solving methods',
         userId: 1
       },
-      {//11
+      {//10
         title: 'maze 2',
         userId: 1
       },
-      {//12
+      {//11
         title: 'Living on Pluto',
         userId: 1
       },
-      {//13
-        title: 'leetcode #14 longest common prefix',
+      {//12
+        title: 'Out of Ideas',
         userId: 1
       },
-      {//14
+      {//13
         title: 'empty',
         userId: 1
       },
-      {//15
+      {//14
         title: 'search for me',
         userId: 1
       },
