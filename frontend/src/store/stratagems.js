@@ -4,6 +4,7 @@ import { csrfFetch } from './csrf'
 const POPULATE_STRATAGEMS = 'stratagems/populateStratagems'
 const ADD_STRATAGEM = 'stratagems/addStratagem'
 const REMOVE_STRATAGEM = 'stratagems/removeStratagem'
+const CLEAR_STRATAGEMS = 'stratagems/clearStratagems'
 
 const populateStratagems = (stratagems) => ({
     type: POPULATE_STRATAGEMS,
@@ -18,6 +19,10 @@ const addStratagem = (stratagem) => ({
 const removeStratagem = (id) => ({
     type: REMOVE_STRATAGEM,
     id
+})
+
+export const clearStratagems = () => ({
+    type: CLEAR_STRATAGEMS
 })
 
 
@@ -89,6 +94,8 @@ export default function stratagemsReducer(state = initialState, action){
             newState = {...state}
             delete newState[action.id]
             return newState;
+        case CLEAR_STRATAGEMS:
+            return {};
         default:
             return state
     }

@@ -4,6 +4,7 @@ import {csrfFetch} from './csrf'
 const POPULATE_MANUALS = 'manual/populateManuals'
 const ADD_MANUAL = 'manual/addManual'
 const REMOVE_MANUAL = 'manual/removeManual'
+const CLEAR = 'manual/clearManuals'
 
 const populateManuals = (manuals) => ({
     type: POPULATE_MANUALS,
@@ -18,6 +19,10 @@ const addManual = (manual) => ({
 const removeManual = (id) => ({
     type: REMOVE_MANUAL,
     id
+})
+
+export const clearManuals = () =>({
+    type: CLEAR
 })
 
 
@@ -87,6 +92,8 @@ export default function manualsReducer(state = initialState, action){
             newState = {...state}
             delete newState[action.id]
             return newState;
+        case CLEAR:
+            return {};
         default:
             return state;
     }

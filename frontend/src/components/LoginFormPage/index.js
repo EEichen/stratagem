@@ -51,7 +51,7 @@ const LoginForm = () => {
 
                 <input 
                     className='lo-input'
-                    type="text"
+                    type="password"
                     placeholder='password' 
                     value={password} 
                     onChange={e => setPassword(e.target.value)}

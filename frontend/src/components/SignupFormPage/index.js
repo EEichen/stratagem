@@ -56,14 +56,14 @@ const SignupForm = () => {
 
                 <input
                     className='lo-input'
-                    type="text"
+                    type="password"
                     placeholder='Password'
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                 />
                 <input
                     className='lo-input'
-                    type="text"
+                    type="password"
                     placeholder='Confirm Password'
                     value={confPassword}
                     onChange={e => setConfPassword(e.target.value)}

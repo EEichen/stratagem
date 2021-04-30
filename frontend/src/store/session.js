@@ -1,4 +1,7 @@
 import { csrfFetch } from "./csrf"
+import { clearManuals } from "./manuals"
+import { clearSearch } from "./search"
+import { clearStratagems } from "./stratagems"
 
 
 //actions-----------------------------------------------------------------------
@@ -60,6 +63,9 @@ export const logOut = () => async (dispatch) => {
     })
 
     dispatch(removeUserSession());
+    dispatch(clearManuals())
+    dispatch(clearStratagems())
+    dispatch(clearSearch())
     
     return res;
 }
