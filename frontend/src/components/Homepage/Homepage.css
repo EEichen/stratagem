@@ -13,10 +13,12 @@
     position: absolute;
     width: 98%;
     height: 92.5%;
-    z-index: -20000;
+    z-index: -1;
     text-align: center;
-    background-image: url(../../images/75\ by\ 75\ orthogonal\ maze.svg);
+    /* background-image: url(../../images/75\ by\ 75\ orthogonal\ maze.svg); */
+    background-image: url(../../images/200\ by\ 200\ orthogonal\ maze.svg);
 }
+
 
 
 

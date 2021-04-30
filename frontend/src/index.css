@@ -2,18 +2,20 @@
 .button{
     background-color: lightgrey;
     box-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
+    border-radius: 10px 10px;
 }
 
 body{
     color: wheat;
+    z-index: -2;
+    background-color: rgba(0, 0, 0, .8);
+    font-family:'Times New Roman', Times, serif;
 }
 
-body{
-    background-color: rgba(0, 0, 0, .8);
-}
 
 #root{
     height: 94.5%;
+    z-index: -2;
 }
 
 html, body{
@@ -26,7 +28,7 @@ html, body{
 input, textarea{
     background-color: rgba(245, 222, 179, 1);
     border-top: none;
-    border-left:none;
+    border-left: none;
     border-right: none;
     border-bottom: 1px solid rgba(0, 0, 0, .25);
 
@@ -44,7 +46,22 @@ textarea:focus{
 }
 
 .submit-button{
-    width: 50%;
+    width: 33%;
     margin: auto;
     margin-bottom: 5px;
 }
+
+.footer{
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    width: 98%;
+    align-items:center;
+    justify-content: flex-end;
+    background-color: rgba(36, 36, 36, 0.8);
+    max-height: 40px;
+    min-height: 40px;
+    border-radius: 10px;
+}
+
+

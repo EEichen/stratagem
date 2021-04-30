@@ -1,5 +1,6 @@
 
 
+
 const SplashPage = () => {
     return(
         <div className='splash'>
