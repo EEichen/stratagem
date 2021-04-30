@@ -20,7 +20,7 @@ const EditArea = ({stratagem}) => {
         setSaved(false);
 
         let timeout;
-        if(title.length > 0 && title.length < 200){
+        if(title.length > 0 && title.length < 200 && text.length <= 2048){
 
             if(!initalLoad){
                 timeout = setTimeout(() => {

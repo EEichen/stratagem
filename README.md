@@ -9,27 +9,26 @@ Stratagem, inspired by Evernote, is a note taking app focused on noting down str
 
 ## Tech Used
 ---
-    * React
-    * Redux
-    * Sequelize
-    * Express
-    * Node
-    * CSS
-    * JWT
-    * Bcryptjs
+* React
+* Redux
+* Sequelize
+* Express
+* Node
+* CSS
+* JWT
+* Bcryptjs
 
 ## Features
 ---
-    * Manuals - Users are able to create, edit, and delete manuals to store their       stratagems.
+* Manuals - Users are able to create, edit, and delete manuals to store their      stratagems.
 
-    * Stratagems - Users are able to create, edit, and delete stratagems to note down their ideas for solving problems and display associated images.
+* Stratagems - Users are able to create, edit, and delete stratagems to note down theirideas for solving problems and display associated images.
 
-    * Autosave - Stratagems, upon being edited, are automatically saved after a period of time.
+* Autosave - Stratagems, upon being edited, are automatically saved after a period oftime.
 
+* Search - Users can search for both manuals and stratagems and have the resultsdisplayed in a search result area.
 
-    * Search - Users can search for both manuals and stratagems and have the results displayed in a search result area.
-
-    * User Auth - Users can sign up, log in, and log out.
+* User Auth - Users can sign up, log in, and log out.
 
 ### Autosave code Snippet
 ```js
