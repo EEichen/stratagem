@@ -26,7 +26,7 @@ const SideBar = ({ selectedManual, setSelectedManual}) => {
         // console.log(e.target.id)
         if(e.target.id.startsWith('manual-')){
             const id = e.target.id.split('-')[1]
-            console.log(id);
+            // console.log(id);
 
             setIsSelected(true)
             setSelectedManual(id)
