@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    text: DataTypes.STRING(2048),
+    text: DataTypes.STRING(10000),
     imageUrl: DataTypes.STRING,
     manualId: {
       type: DataTypes.INTEGER,

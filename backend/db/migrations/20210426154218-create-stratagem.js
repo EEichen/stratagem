@@ -13,10 +13,10 @@ module.exports = {
         allowNull: false
       },
       text: {
-        type: Sequelize.STRING(2048)
+        type: Sequelize.STRING(10000)
       },
       imageUrl: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(10000)
       },
       manualId: {
         type: Sequelize.INTEGER,
