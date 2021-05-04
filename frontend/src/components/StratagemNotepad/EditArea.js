@@ -64,6 +64,7 @@ const EditArea = ({stratagem}) => {
                     setInitialLoad(false)
                 }}
                 />
+                <button className='button show-drw-area'>➕</button>
             <div className='text-img-area'>
                 <textarea 
                 className='edit-text'
