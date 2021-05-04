@@ -2,6 +2,7 @@ import {useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 import { deleteStratagem, editStratagem } from '../../store/stratagems';
+import DrawArea from '../DrawArea';
 
 const EditArea = ({stratagem}) => {
     const dispatch = useDispatch();
@@ -14,6 +15,7 @@ const EditArea = ({stratagem}) => {
     const [imageUrl, setImageUrl] = useState(stratagem ? stratagem.imageUrl : '')
     const [saved, setSaved] = useState(false)
     const [initalLoad, setInitialLoad] = useState(true)
+    const [showDrawArea, setShowDrawArea] = useState(false)
     
     useEffect(() => {
         if (!stratagem.id) history.push('/')
@@ -64,7 +66,7 @@ const EditArea = ({stratagem}) => {
                     setInitialLoad(false)
                 }}
                 />
-                <button className='button show-drw-area'>➕</button>
+                <button className='button show-drw-area' onClick={()=> setShowDrawArea(true)}>➕</button>
             <div className='text-img-area'>
                 <textarea 
                 className='edit-text'
@@ -77,6 +79,7 @@ const EditArea = ({stratagem}) => {
 
                 </textarea>
                 {imageUrl ? <img className='edit-area-image' src={imageUrl} alt=""/>: ''}
+                {showDrawArea ? <DrawArea setShowDrawArea={setShowDrawArea} setImageUrl={setImageUrl} /> : ''}
 
             </div>
             
