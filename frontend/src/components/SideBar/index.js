@@ -14,19 +14,15 @@ const SideBar = ({ selectedManual, setSelectedManual}) => {
     const history = useHistory();
 
     const [isSelected, setIsSelected] = useState(false);
-    // const [selectedManual, setSelectedManual] = useState('');
     const [showManualForm, setShowManualForm] = useState(false);
-    // console.log(manuals)
     
     useEffect(() => {
         dispatch(getManuals())
     }, [dispatch])
 
     const selectManual = (e) => {
-        // console.log(e.target.id)
         if(e.target.id.startsWith('manual-')){
             const id = e.target.id.split('-')[1]
-            // console.log(id);
 
             setIsSelected(true)
             setSelectedManual(id)
