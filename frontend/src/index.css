@@ -64,4 +64,34 @@ textarea:focus{
     border-radius: 10px;
 }
 
+.gh-link > img{
+    width: 20px;
+    position: relative;
+    top: 5px;
+}
+
+.gh-link{
+    padding: 5px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.li-link{
+    width: 30px;
+    height: 30px;
+    background-color: #0a66c2;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+#liico{
+    width: 20px;
+    height: 20px;
+    color: white;
+    position: relative;
+    left: 2px;
+}
+
 
