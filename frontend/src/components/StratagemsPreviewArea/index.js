@@ -1,3 +1,4 @@
+import React from "react"
 import { useSelector } from "react-redux"
 import Preview from "./Preview"
 import './StratagemsPreviewArea.css'
