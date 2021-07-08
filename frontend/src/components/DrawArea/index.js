@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import React, { useRef } from "react"
 
 const DrawArea = ({ setShowDrawArea ,setImageUrl}) => {
     const ref = useRef();

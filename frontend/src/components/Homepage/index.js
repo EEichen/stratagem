@@ -1,5 +1,5 @@
+import React from 'react'
 import {useSelector} from 'react-redux'
-
 import SideBar from '../SideBar'
 import StratagemsPreviewArea from '../StratagemsPreviewArea'
 import SplashPage from './SplashPage'
